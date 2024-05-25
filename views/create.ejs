@@ -1,0 +1,53 @@
+<%-include("./partical/header")%>
+<style>
+    h1{
+        /* background-color: darkgreen; */
+        color:white;
+        align-items: center;
+        text-decoration: underline white;
+        margin-top: 5%;
+        
+    }
+    form{
+        /* background-color: darkgreen; */
+        color:white;
+        align-items: center;
+    }
+    form button{
+        margin-left: 30%;
+    }
+    .center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    body{
+        /* background-color:rgba(2, 34, 2, 0.92); */
+        background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+
+<div class="center">
+
+<h1>Add your Book in Lib</h1>
+
+<br>
+<form action="/create" method="post">
+
+    <input type="text" name="name" placeholder="book name">
+    <br><br><br>
+    <input type="text" name="author" placeholder="author name">
+    <br><br><br>
+    <input type="text" name="price" placeholder="price">
+    <br><br><br>
+ <button>Add book</button>
+
+</form>
+</div>
+
+
+<%-include("./partical/footer")%>

@@ -1,0 +1,37 @@
+<%-include("./partical/header")%>
+<style>
+  body{
+        /* background-color:rgba(2, 34, 2, 0.92); */
+        background-image: url(https://media.istockphoto.com/id/1169630303/photo/blue-textured-background.webp?b=1&s=170667a&w=0&k=20&c=tI2xFhXqXFqMM0IvxSYY3F7LIwv450h2ch3yD-lZ9HU=);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1{
+      color: white;
+    }
+</style>
+<a href="/">back to home</a>
+<h1>Store books</h1>
+<div class=" px-4 d-flex gap-3 justify-content-center flex-wrap">
+     
+<%store.forEach(function(books,index){%>
+    <div class="card " style="width: 18rem;">
+        <div class="card-body">
+            <p class="text-primary">Book name : <%=books.name%></p>
+            <p>Author name : <%=books.author%></p>
+            <p>Price : <%=books.price%></p>
+            <a href="/delete/<%=index%>" class="card-link" >Delete</a>
+          <a href="/update/<%=index%>" class="card-link">Update</a>
+        </div>
+      </div>
+    <!-- <p><%=books.name%></p>
+    <p><%=books.author%></p>
+    <p><%=books.price%></p>
+
+<a href="/delete/<%=index%>">Delete</a>
+<a href="/update/<%=index%>">Update</a> -->
+<%})%>
+</div>
+
+<%-include("./partical/footer")%>

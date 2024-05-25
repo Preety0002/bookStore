@@ -1,0 +1,12 @@
+<%-include("./partical/header")%>
+<h1>updated page </h1>
+<form action="/update/<%= index%>" method="post">
+
+    <input type="text" name="name" value="<%=num.name%>" placeholder="update book name">
+    <input type="text" name="author" value="<%=num.author%>" placeholder="update authorname">
+    <input type="text" name="price" value="<%=num.price%>" placeholder="update price">
+ <button>Submit</button>
+</form>
+
+
+<%-include("./partical/footer")%>
